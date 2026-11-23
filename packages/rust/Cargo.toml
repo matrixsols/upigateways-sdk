@@ -1,0 +1,13 @@
+[package]
+name = "upigateways"
+version = "1.0.0"
+edition = "2021"
+authors = ["UPI Gateways <support@upigateways.in>"]
+description = "Official Rust SDK for UPI Gateways - Zero Fee (0% MDR) UPI Payment Infrastructure."
+homepage = "https://www.upigateways.in"
+repository = "https://github.com/matrixsols/upigateways-sdk"
+documentation = "https://docs.rs/upigateways"
+readme = "README.md"
+license = "MIT"
+keywords = ["upi", "payment", "india", "gateway", "fintech"]
+categories = ["web-programming::http-client", "finance"]
