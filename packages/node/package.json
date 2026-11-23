@@ -1,0 +1,45 @@
+{
+  "name": "upigateways",
+  "version": "1.0.1",
+  "description": "Official Node.js & TypeScript SDK for UPI Gateways - Zero Transaction Fee (0% MDR) UPI Payment Gateway with instant direct bank settlement.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "upi",
+    "payment-gateway",
+    "india",
+    "0-mdr",
+    "zero-fee",
+    "gpay",
+    "phonepe",
+    "paytm",
+    "bhim",
+    "razorpay-alternative",
+    "cashfree-alternative",
+    "matrixpay",
+    "upigateways"
+  ],
+  "author": "UPI Gateways <support@upigateways.in> (https://www.upigateways.in)",
+  "license": "MIT",
+  "homepage": "https://www.upigateways.in",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ammireddy1998/matrixpay.git",
+    "directory": "packages/upigateways-sdk"
+  },
+  "bugs": {
+    "url": "https://www.upigateways.in"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

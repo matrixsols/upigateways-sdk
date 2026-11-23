@@ -1,0 +1,38 @@
+{
+  "name": "upigateways/sdk",
+  "description": "Official PHP SDK for UPI Gateways - Zero Transaction Fee (0% MDR) UPI Payment Gateway with instant direct bank settlement.",
+  "keywords": [
+    "upi",
+    "payment gateway",
+    "india",
+    "zero mdr",
+    "zero fee",
+    "razorpay alternative",
+    "cashfree alternative",
+    "paytm",
+    "phonepe",
+    "gpay",
+    "bhim",
+    "matrixpay",
+    "upigateways"
+  ],
+  "homepage": "https://www.upigateways.in",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "UPI Gateways",
+      "email": "support@upigateways.in",
+      "homepage": "https://www.upigateways.in"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "ext-json": "*",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "UpiGateways\\": "src/"
+    }
+  }
+}
