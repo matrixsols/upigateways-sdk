@@ -28,6 +28,7 @@ Instant T+0 settlements directly into your bank account. No 2% aggregator cuts. 
 | **PHP (Laravel, Symfony)** | [Packagist: `upigateways/sdk`](https://packagist.org/packages/upigateways/sdk) | `composer require upigateways/sdk` | [packages/php](packages/php) |
 | **Rust** | [crates.io: `upigateways`](https://crates.io/crates/upigateways) | `cargo add upigateways` | [packages/rust](packages/rust) |
 | **Golang** | [pkg.go.dev](https://pkg.go.dev/github.com/matrixsols/upigateways-sdk/packages/go) | `go get github.com/matrixsols/upigateways-sdk/packages/go` | [packages/go](packages/go) |
+| **Postman API Collection** | [Postman Collection](postman/upi-gateways.postman_collection.json) | Import JSON into Postman | [postman](postman) |
 
 ---
 

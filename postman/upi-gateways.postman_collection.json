@@ -1,0 +1,131 @@
+{
+  "info": {
+    "_postman_id": "c1f7b0a8-7f92-4d51-b8f2-892f9cb350a1",
+    "name": "UPI Gateways API (Official Collection)",
+    "description": "# UPI Gateways Official API Collection\n\nOfficial Postman Collection for [UPI Gateways](https://www.upigateways.in) — The Zero Transaction Fee (0% MDR) UPI Payment Infrastructure for Indian Merchants & Developers.\n\n### Key Highlights:\n- **0% MDR / No Commissions**: Direct T+0 settlements straight into your bank account.\n- **Multi-bank & Merchant Aggregation**: Rotate between Paytm Business, PhonePe, BharatPe, and HDFC SmartHub Vyapar.\n- **Dynamic UPI QR & Deep Links**: Generates instant QR codes and mobile app intent links (GPay, PhonePe, Paytm, BHIM).\n\n### Authentication:\nSet your `API_KEY` and `API_SECRET` in the Collection Variables or Environment.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Create UPI Payment Order",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"key\": \"{{API_KEY}}\",\n  \"client_txn_id\": \"TXN_{{$timestamp}}\",\n  \"amount\": \"499.00\",\n  \"p_info\": \"Pro Subscription Plan\",\n  \"customer_name\": \"Aditi Rao\",\n  \"customer_email\": \"aditi.rao@example.com\",\n  \"customer_mobile\": \"9876543210\",\n  \"redirect_url\": \"https://yourstore.com/checkout/success\",\n  \"webhook_url\": \"https://api.yourstore.com/webhooks/upi\",\n  \"udf1\": \"user_id_4501\",\n  \"udf2\": \"ecommerce\",\n  \"udf3\": \"\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/create_order",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "create_order"
+          ]
+        },
+        "description": "Generates a dynamic UPI QR code and deep-linked UPI intent URI (Google Pay, PhonePe, Paytm, BHIM) for the customer."
+      },
+      "response": []
+    },
+    {
+      "name": "2. Check Order Payment Status",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"key\": \"{{API_KEY}}\",\n  \"client_txn_id\": \"TXN_1700000000\",\n  \"txn_date\": \"23-11-2026\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/check_order_status",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "check_order_status"
+          ]
+        },
+        "description": "Checks the real-time payment confirmation status of an order using your client transaction reference ID."
+      },
+      "response": []
+    },
+    {
+      "name": "3. Mock Webhook Notification (Incoming Example)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-UPI-Signature",
+            "value": "5d41402abc4b2a76b9719d911017c592b217036a438150ff292f7035cf31c4f5"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"event\": \"payment.success\",\n  \"client_txn_id\": \"TXN_1700000000\",\n  \"order_id\": \"ORD_982143\",\n  \"amount\": \"499.00\",\n  \"status\": \"Success\",\n  \"upi_txn_id\": \"432198765432\",\n  \"payer_vpa\": \"customer@okaxis\",\n  \"created_at\": \"2026-11-23T12:00:00Z\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.yourstore.com/webhooks/upi",
+          "protocol": "https",
+          "host": [
+            "api",
+            "yourstore",
+            "com"
+          ],
+          "path": [
+            "webhooks",
+            "upi"
+          ]
+        },
+        "description": "Demonstrates the exact webhook payload sent to your server upon successful UPI payment confirmation."
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": "https://www.upigateways.in/api/v2",
+      "type": "string"
+    },
+    {
+      "key": "API_KEY",
+      "value": "YOUR_API_KEY",
+      "type": "string"
+    },
+    {
+      "key": "API_SECRET",
+      "value": "YOUR_API_SECRET",
+      "type": "string"
+    }
+  ]
+}
