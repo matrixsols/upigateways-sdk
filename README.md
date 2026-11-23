@@ -4,6 +4,7 @@
 
 [![npm version](https://img.shields.io/npm/v/upigateways.svg)](https://www.npmjs.com/package/upigateways)
 [![PyPI version](https://img.shields.io/pypi/v/upigateways.svg)](https://pypi.org/project/upigateways/)
+[![Pub Version](https://img.shields.io/pub/v/upigateways.svg)](https://pub.dev/packages/upigateways)
 [![Packagist version](https://img.shields.io/packagist/v/upigateways/sdk.svg)](https://packagist.org/packages/upigateways/sdk)
 [![crates.io version](https://img.shields.io/crates/v/upigateways.svg)](https://crates.io/crates/upigateways)
 [![Go Reference](https://pkg.go.dev/badge/github.com/matrixsols/upigateways-sdk/packages/go.svg)](https://pkg.go.dev/github.com/matrixsols/upigateways-sdk/packages/go)
@@ -22,6 +23,7 @@ Instant T+0 settlements directly into your bank account. No 2% aggregator cuts. 
 | Language | Package / Registry | Installation | Documentation |
 | :--- | :--- | :--- | :--- |
 | **Node.js / TypeScript** | [npm: `upigateways`](https://www.npmjs.com/package/upigateways) | `npm install upigateways` | [packages/node](packages/node) |
+| **Flutter / Dart** | [pub.dev: `upigateways`](https://pub.dev/packages/upigateways) | `flutter pub add upigateways` | [packages/flutter](packages/flutter) |
 | **Python (FastAPI, Django)** | [PyPI: `upigateways`](https://pypi.org/project/upigateways/) | `pip install upigateways` | [packages/python](packages/python) |
 | **PHP (Laravel, Symfony)** | [Packagist: `upigateways/sdk`](https://packagist.org/packages/upigateways/sdk) | `composer require upigateways/sdk` | [packages/php](packages/php) |
 | **Rust** | [crates.io: `upigateways`](https://crates.io/crates/upigateways) | `cargo add upigateways` | [packages/rust](packages/rust) |
