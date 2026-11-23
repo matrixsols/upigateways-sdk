@@ -1,6 +1,6 @@
 {
   "name": "upigateways",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Official Node.js & TypeScript SDK for UPI Gateways - Zero Transaction Fee (0% MDR) UPI Payment Gateway with instant direct bank settlement.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -33,8 +33,8 @@
   "homepage": "https://www.upigateways.in",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ammireddy1998/matrixpay.git",
-    "directory": "packages/upigateways-sdk"
+    "url": "https://github.com/matrixsols/upigateways-sdk.git",
+    "directory": "packages/node"
   },
   "bugs": {
     "url": "https://www.upigateways.in"
